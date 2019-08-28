@@ -1,0 +1,21 @@
+1. Steps to connect to a database using JDBC:
+    1. Load the driver.
+    2. Define the connection URL.
+    3. Establish the connection.
+    4. Create a statement object
+    5. Execute a query using statement.
+    6. Process the result.
+    7. Close the connection.
+2.  a. executeQuery() allows the execution of a select statement to the database which returns
+       a result set.
+              Statement stmt = con.createStatement();
+              ResultSet rs = stmt.executeQuery("SELECT * FROM tablename");
+    b. executeUpdate() allows the execution of an update, insert, or delete statement to
+        the database which returns the number of rows modified.
+              int num = stmt.executeUpdate("INSERT INTO tablename (col1, col2) VALUES('val1', 'val2')");
+    c. next() moves the cursor of to the next row.
+              ResultSet rs = statement.executeQuery(query);
+              while (rs.next()){
+                System.out.println(rs.getString(0));
+              }
+              
